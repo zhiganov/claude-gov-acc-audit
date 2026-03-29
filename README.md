@@ -77,9 +77,9 @@ Structural risks grounded in evidence, comparative context from peer systems, an
 
 ## Research
 
-- [gov/acc: Accelerating Governance Innovation in Web3](https://gov-acc.metagov.org/) — Eugene Leventhal, Metagov
+- [gov/acc](https://gov-acc.metagov.org/) — governance acceleration initiative by Metagov
+- [Deliberate Priority Leaderboard](https://govacc.net/deliberate/leaderboard) — community-ranked governance priorities with scores from practitioner deliberation
 - [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — interactive visualizations of problems, solutions, and actors
-- [Harmonica](https://harmonica.chat) — structured interviews powering the research
 
 ## License
 
