@@ -22,7 +22,7 @@ Pulls publicly available governance data:
 - **Onchain data** — token distribution, treasury flows via block explorers
 - **User-provided** — local files, screenshots, pasted content — meeting notes, delegate statements, anything relevant
 
-For major DAOs (ENS, Arbitrum, Optimism, MakerDAO), most governance data is publicly accessible.
+For major DAOs (ENS, Arbitrum, Optimism, etc.), most governance data is publicly accessible.
 
 ### The gov/acc research lens
 
