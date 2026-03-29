@@ -86,6 +86,10 @@ The skill will be powered by a dedicated **gov/acc MCP server** — structured a
 
 Until then, the skill works by web fetching governance platform data and the priority leaderboard.
 
+## Standards
+
+- **[DDS](https://www.dds.xyz/)** (Decentralized Deliberation Standard) — open protocol for sovereign, verifiable, interoperable deliberation. The audit checks whether the governance system uses open standards for deliberation data, and recommends DDS-compatible tools when gaps are found.
+
 ## Other MCP integrations
 
 - **living-structure** — does the governance exhibit Alexander's properties?
