@@ -6,9 +6,9 @@ Works on DAOs, protocols, communities, organizations — anything with a governa
 
 ## Why
 
-The gov/acc research (Metagov, 2026) interviewed 50+ governance practitioners and identified 11 core problems that cause governance systems to fail. These aren't theoretical — every problem was described by people who experienced it firsthand: token voting plutocracy, governance theater, voting fatigue, institutional amnesia, broken contributor economies, and more.
+The gov/acc initiative (Metagov, 2026) brings together governance practitioners from across web3, civic tech, and institutional design — through structured interviews, workshops, deliberation platforms, and collaborative research. The community has identified core problems that cause governance systems to fail, and the solutions practitioners are building to address them.
 
-This skill turns that research into a practical audit tool. Point it at a DAO constitution, a community's decision-making process, or a protocol's governance framework and get a research-grounded assessment of where it's healthy and where it's at risk.
+This skill turns that ongoing research into a practical audit tool. Point it at a DAO constitution, a community's decision-making process, or a protocol's governance framework and get a research-grounded assessment of where it's healthy and where it's at risk.
 
 ## Install
 
@@ -38,21 +38,21 @@ npx skillsadd zhiganov/claude-gov-acc-audit
 
 ## What it checks
 
-### The 11 Governance Problems (from 50+ practitioner interviews)
+### 11 Governance Problems
 
-| # | Problem | Prevalence | Depth |
-|---|---------|-----------|-------|
-| 1 | Token Voting Failure & Plutocracy | 28/50 | High |
-| 2 | Voting Fatigue & Apathy | 24/50 | Medium |
-| 3 | Governance Theater & Recentralization | 20/50 | High |
-| 4 | Informal Power & Narrative Capture | 17/50 | High |
-| 5 | Broken Contributor Economies | 14/50 | Very High |
-| 6 | Lack of Clear Purpose | 14/50 | Medium |
-| 7 | Delegate Sustainability | 11/50 | High |
-| 8 | Grant System Dysfunction | 10/50 | High |
-| 9 | Technical & Legal Gaps | 10/50 | Very High |
-| 10 | Over-Reliance on Game Theory | 8/50 | Very High |
-| 11 | Institutional Amnesia | 8/50 | Very High |
+| # | Problem |
+|---|---------|
+| 1 | Token Voting Failure & Plutocracy |
+| 2 | Voting Fatigue & Apathy |
+| 3 | Governance Theater & Recentralization |
+| 4 | Informal Power & Narrative Capture |
+| 5 | Broken Contributor Economies |
+| 6 | Lack of Clear Purpose |
+| 7 | Delegate Sustainability |
+| 8 | Grant System Dysfunction & Capital Misallocation |
+| 9 | Technical & Legal Gaps |
+| 10 | Over-Reliance on Game Theory |
+| 11 | Institutional Amnesia |
 
 ### Solutions Assessment
 
@@ -60,11 +60,10 @@ The audit also checks whether the system employs practitioner-recommended soluti
 
 ## Output
 
-For each of the 11 problems: **Protected**, **Partially addressed**, or **Vulnerable** — with evidence from the governance artifacts. Plus critical gaps with specific recommended solutions from the research.
+For each problem: **Protected**, **Partially addressed**, or **Vulnerable** — with evidence from the governance artifacts. Plus critical gaps with specific recommended solutions from the research.
 
 ## Optional MCP integrations
 
-- **jtbd-knowledge** — what job are members hiring this governance to do?
 - **living-structure** — does the governance exhibit Alexander's properties?
 - **Plurality MCP** (planned) — Weyl & Tang's collaborative technology principles
 - **Governable Spaces MCP** (planned) — Schneider's governance framework
@@ -73,7 +72,7 @@ For each of the 11 problems: **Protected**, **Partially addressed**, or **Vulner
 
 - [gov/acc: Accelerating Governance Innovation in Web3](https://medium.com/@eugene.leventhal/gov-acc-accelerating-governance-innovation-in-web3-31309f06ab63) — Eugene Leventhal, Metagov
 - [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — interactive visualizations of problems, solutions, and actors
-- Data collected via [Harmonica](https://harmonica.chat) structured interviews (39 completed sessions, 50 participants engaged)
+- [Harmonica](https://harmonica.chat) — structured interviews powering the research
 
 ## License
 

@@ -13,9 +13,9 @@ The subject can be: a DAO constitution, a community's decision-making process, a
 
 ## Background
 
-The gov/acc research (Metagov, 2026) identified 11 core governance problems through structured interviews with governance practitioners. These problems — and the solutions practitioners proposed — form an empirically-grounded checklist for evaluating governance health.
+The gov/acc initiative (Metagov, 2026) brings together governance practitioners through structured interviews, workshops, and deliberation platforms. The community has identified 11 core governance problems and the solutions practitioners are building to address them.
 
-This isn't theoretical — every item was identified by real governance practitioners describing real failures they experienced.
+This isn't theoretical — every item was surfaced by real governance practitioners describing real failures they experienced.
 
 ## Process
 
@@ -40,7 +40,7 @@ For each problem, assess whether the governance system is vulnerable to it. Scor
 - `[n/a]` — not applicable to this type of governance
 
 #### 1. Token Voting Failure & Plutocracy
-*The most widespread problem (28/50 practitioners). Wealth-weighted voting concentrates power.*
+*The most widespread problem. Wealth-weighted voting concentrates power.*
 
 - [ ] Voting power is not purely proportional to token holdings
 - [ ] Mechanisms exist to amplify smaller holders (quadratic voting, conviction voting, delegation)
@@ -208,7 +208,6 @@ or Alexander's living structure properties where relevant.}
 
 ## Optional MCP integrations
 
-- **jtbd-knowledge MCP** — what job are members hiring this governance to do?
 - **living-structure** — does the governance exhibit Alexander's properties? (boundaries, gradients, subsidiarity as levels of scale)
 - **Plurality MCP** (planned) — Weyl & Tang's collaborative technology principles
 - **Governable Spaces MCP** (planned) — Schneider's framework for legitimate governance
