@@ -2,8 +2,6 @@
 
 Analyze any governance system — DAO, protocol, community, organization — using the [gov/acc](https://gov-acc.metagov.org/) research framework. Not a checklist. Reads real governance data and produces context-specific structural analysis grounded in what practitioners have learned.
 
-Built by [Harmonica](https://harmonica.chat), the AI-facilitated sensemaking platform powering the gov/acc research.
-
 ## Why
 
 Vitalik's [d/acc](https://vitalik.eth.limo/general/2025/01/05/dacc2.html) vision — decentralized, democratic, differential, defensive acceleration — requires governance that actually works. Not governance theater, not token-weighted plutocracy, but systems where distributed decision-making produces better outcomes than centralized control.
