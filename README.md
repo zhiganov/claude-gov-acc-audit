@@ -28,9 +28,8 @@ For major DAOs (ENS, Arbitrum, Optimism, etc.), most governance data is publicly
 
 Every finding is cross-referenced against the gov/acc knowledge base — problems, solutions, and patterns identified by governance practitioners through structured interviews, workshops, and deliberation:
 
-- [gov/acc wiki](https://gov-acc.metagov.org/) — structured problems, solutions, and actor profiles
+- [gov/acc Knowledge Commons](https://gov-acc.metagov.org/) — structured problems, solutions, actor profiles, dashboard
 - [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) — community-ranked priorities with scores
-- [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — governance patterns across ecosystems
 
 This means the tool doesn't just describe what it sees — it connects evidence from the specific governance system to what practitioners across the ecosystem have learned.
 
