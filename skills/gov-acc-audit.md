@@ -1,30 +1,34 @@
 ---
 name: gov/acc Audit
-description: Analyze governance systems using research-backed diagnostic lenses from the gov/acc community. Reads actual governance data — proposals, votes, forums, constitutions — and identifies structural patterns.
+description: Analyze governance systems using the gov/acc research framework. Reads actual governance data — proposals, votes, forums, constitutions — and identifies what's working, what isn't, and what experiments could help.
 ---
 
 # gov/acc Audit
 
-Analyze a governance system using diagnostic lenses from the gov/acc (governance acceleration) research community. This is not a checklist — it reads actual governance artifacts and identifies structural patterns, divergences between stated values and actual behavior, and conditions that make specific failure modes likely.
+Analyze a governance system through the lens of the gov/acc (governance acceleration) initiative. Not a checklist — reads actual governance artifacts and produces context-specific analysis grounded in what practitioners and researchers have learned.
 
-**Trigger:** `/gov-acc-audit <subject>` optionally with `--focus <lens>`
+**Trigger:** `/gov-acc-audit <subject>` optionally with `--focus <domain>`
 
 The subject can be: a DAO (by name or URL), a protocol's governance framework, a community's decision-making process, an organization's bylaws.
 
 ## Background
 
-The gov/acc initiative (Metagov, 2026) brings together governance practitioners through structured interviews, workshops, and deliberation platforms. The community has identified recurring governance failure modes and the structural conditions that produce them.
+Gov/acc is a time-bound research initiative (through Devcon 2026) focused on demonstrating that decentralized governance can meaningfully improve ecosystem outcomes. The core thesis: there's a critical window to prove governance's value. Without demonstrable success, ecosystems will abandon decentralization.
 
-This skill uses those findings as **diagnostic lenses** — not things to check off, but patterns to look for in real governance data.
+The initiative rejects governance maximalism — not everything should be governed decentrally. The question isn't "is governance good?" but "where does decentralized coordination add clear value, and is it working?"
+
+This skill applies the gov/acc framework to a specific governance system: what's working, what isn't, where governance is applied to the right problems, and what experiments could improve outcomes.
+
+Source: [gov/acc: Accelerating Governance Innovation in Web3](https://gov-acc.metagov.org/) — Eugene Leventhal, Metagov
 
 ## Process
 
 ### Step 1: Gather governance artifacts
 
-Collect as much real data as possible about the system. The more data, the better the analysis.
+Collect real data about the system. The more data, the better the analysis.
 
 **Onchain / platform data:**
-- Proposals and their outcomes (Tally, Agora, Snapshot, Governor contracts)
+- Proposals and outcomes (Tally, Agora, Snapshot, Governor contracts)
 - Voting records — participation rates, vote distribution, delegate behavior
 - Treasury flows — where money goes, who decides
 - Token distribution — concentration, delegation patterns
@@ -33,107 +37,91 @@ Collect as much real data as possible about the system. The more data, the bette
 - Constitution, charter, bylaws, operating manual
 - Forum discussions (Discourse, Commonwealth) — especially contentious proposals
 - Delegate statements and platforms
-- Meeting notes, call recordings, governance reports
+- Meeting notes, governance reports, retrospectives
 - Communication channels (Discord governance channels, Telegram groups)
 
-**Use web search and available MCP tools** to fetch current data. For major DAOs, governance platforms (Tally, Agora, Boardroom) have public APIs and dashboards.
+**Use web search and available MCP tools** to fetch current data. For major DAOs, governance platforms (Tally, Agora, Boardroom) have public dashboards.
 
-### Step 2: Quantitative analysis
+### Step 2: Establish baselines
 
-Before interpreting, establish the baseline numbers:
+Before interpreting, establish the numbers:
 
-- **Participation trends** — voter turnout over time, by proposal type. Is it rising, falling, stable?
-- **Power concentration** — what % of voting power is held by top 10/20/50 addresses? How has this changed?
-- **Proposal velocity** — how many proposals per month? What % pass? What % are contested?
-- **Delegate health** — how many active delegates? Retention rate? Voting consistency?
-- **Treasury deployment** — burn rate, allocation categories, accountability mechanisms
-- **Time-to-decision** — how long from proposal to execution?
+- **Participation trends** — voter turnout over time, by proposal type
+- **Power concentration** — % of voting power in top 10/20/50 addresses
+- **Proposal velocity** — proposals per month, pass rate, contested vs rubber-stamped
+- **Delegate health** — active delegates, retention, voting consistency
+- **Treasury deployment** — burn rate, allocation categories, accountability
+- **Time-to-decision** — proposal to execution
 
-Present these as facts before drawing conclusions.
+Present facts before drawing conclusions.
 
-### Step 3: Structural diagnosis
+### Step 2b: Weight by community priorities
 
-Using the gov/acc diagnostic lenses, analyze what the data reveals about the system's structural health. For each lens that applies, look for **specific evidence** in the artifacts — not abstract risks, but concrete patterns.
+Fetch the [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) to understand what the broader governance community considers most urgent. Use the priority scores to weight the analysis — domains aligned with higher-ranked priorities deserve deeper investigation.
 
-#### Lens 1: Power distribution
-*Not "is there plutocracy?" but "what does voting power concentration actually mean for this system's decisions?"*
+### Step 3: Analyze through the five gov/acc research domains
 
-- Who controls outcomes? Trace the last 20 contested proposals — did the same wallets/delegates decide them?
-- What decisions can small holders actually influence?
-- Is there a path from participation to power, or is power static?
+These domains come directly from the gov/acc initiative's research agenda. For each, analyze what the data reveals about this specific system. Look for evidence, not abstractions.
 
-#### Lens 2: Decision legitimacy
-*Not "is there governance theater?" but "where do stated process and actual decision-making diverge?"*
+#### Domain 1: Participation & Voice
 
-- Which important decisions went through governance vs were made informally?
-- Are there patterns of proposals being pre-negotiated before the vote?
-- Do governance outcomes actually get implemented? Track execution rate.
+*What coordination problems does decentralized governance actually solve here? Is governance applied to the right surfaces?*
 
-#### Lens 3: Participation sustainability
-*Not "is there voting fatigue?" but "what is the actual participation trajectory and what's driving it?"*
+- What decisions go through governance? Are these the ones that *should*?
+- Is there governance happening where centralized decision-making would be more effective? (governance maximalism)
+- Are there decisions made centrally that the community should have voice in?
+- What does the participation trajectory look like, and what's driving it?
+- Do tools and processes increase participation while improving (not just legitimizing) outcomes?
+- Is the community scoped to people who actually sustain the system, or is it open to drive-by voting?
 
-- Participation trend by proposal type — maybe core protocol votes get turnout but grants don't
-- What's the delegate churn rate? Why are delegates leaving?
-- Is the system asking too much of participants, or too little?
+#### Domain 2: Transparency & Accountability
 
-#### Lens 4: Information asymmetry
-*Not "is there narrative capture?" but "who has access to what information and how does that shape decisions?"*
+*What does functional accountability actually look like in this system, operationally?*
 
-- Are proposal impacts well-communicated before votes?
-- Do insiders have context that regular participants lack?
-- How accessible is governance information to newcomers?
+- Where do stated process and actual decision-making diverge?
+- Are governance outcomes implemented? Track the execution rate.
+- Is proposal impact well-communicated before votes, or are people voting blind?
+- Can you trace a decision from proposal to rationale to outcome to evaluation?
+- Is there accountability for funded work, or just allocation?
+- Where is information asymmetry — who has context that shapes decisions?
 
-#### Lens 5: Contributor alignment
-*Not "are contributors compensated?" but "does the incentive structure produce the behaviors the system needs?"*
+#### Domain 3: Resilience & Security
 
-- What gets rewarded? What gets ignored?
-- Are the people doing critical work also the people with governance influence?
-- Is there a contributor pipeline or just an insider circle?
+*How does this community resist capture? What operational structures enable or undermine it?*
 
-#### Lens 6: Resource allocation
-*Not "are grants dysfunctional?" but "does capital flow toward the system's stated priorities?"*
+- Can a small group of actors control outcomes? Trace contested proposals.
+- What happens when key people leave? Has this been tested?
+- Are there mechanisms for the community to override decisions by insiders?
+- What are the attack surfaces — flash loan voting, bribery, social engineering?
+- How does the system handle crises? Any past examples?
 
-- Map treasury outflows against stated strategic priorities — do they align?
-- What's the accountability chain for funded work?
-- How does the system learn from past allocation decisions?
+#### Domain 4: Value Creation & Funding
 
-#### Lens 7: Institutional coherence
-*Not "is there a clear purpose?" but "does the system act as if it has a coherent purpose?"*
+*Does governance drive measurable value, or is it overhead?*
 
-- Do proposals and decisions point in a consistent direction?
-- Can members articulate what the system is for — and do they agree?
-- When priorities conflict, how are tradeoffs made?
+- Does capital flow toward the system's stated priorities? Map treasury outflows against strategy.
+- Which governance mechanisms produce specific, measurable outcomes?
+- What's the cost of governance (time, attention, resources) vs the value it creates?
+- Are contributors — the people doing critical work — aligned with governance incentives?
+- How does the system learn from past funding decisions?
 
-#### Lens 8: Adaptive capacity
-*Not "can governance evolve?" but "how has it actually evolved and what drove those changes?"*
+#### Domain 5: Deliberation & Culture
 
-- What governance changes have been made in the last year? What triggered them?
-- How does the system respond to failures or crises?
-- Is there a feedback loop from governance outcomes to governance design?
+*Which deliberative forms produce the best outcomes here? What's the governance culture?*
 
-#### Lens 9: Knowledge continuity
-*Not "is there institutional amnesia?" but "what happens when key people leave or context is lost?"*
+- Is there genuine deliberation, or just voting on pre-formed positions?
+- What's the culture around disagreement — constructive, adversarial, suppressed?
+- Do newcomers have a path to meaningful governance participation?
+- Is institutional knowledge preserved or lost when people leave?
+- How has governance itself evolved? What triggered changes?
 
-- Can you reconstruct the rationale for a decision from 6 months ago?
-- What happens to a workstream when its lead departs?
-- Is governance knowledge in people's heads or in accessible artifacts?
+### Step 4: Identify appropriate governance surfaces
 
-#### Lens 10: Technical-social alignment
-*Not "are there legal gaps?" but "where do the technical mechanisms and social reality diverge?"*
+This is the key gov/acc question. Based on the analysis, evaluate:
 
-- Where do smart contract constraints not match governance intent?
-- Are there workarounds that indicate the technical system doesn't fit?
-- How are off-chain decisions enforced on-chain?
-
-### Step 3b: Weight by community priorities
-
-Fetch the [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) to understand what the broader governance community considers most urgent. Use the priority scores to weight the analysis — lenses aligned with higher-ranked priorities deserve deeper investigation.
-
-For example, if participation/onboarding is the #1 community priority (score 0.40) and the subject DAO has 2.8% voter turnout, that's not just a finding — it's the most critical gap relative to what the community has identified as important.
-
-### Step 4: Comparative context
-
-If data is available, compare against peer governance systems. What do similar DAOs/communities do differently? What's worked? This isn't about copying — it's about understanding the range of viable approaches.
+- **Where governance adds value** — decisions where decentralized input genuinely improves outcomes
+- **Where governance is overhead** — decisions that would be better made by a smaller group or automated
+- **Where governance is missing** — important decisions made without community input that should have it
 
 ### Step 5: Report
 
@@ -141,53 +129,59 @@ If data is available, compare against peer governance systems. What do similar D
 # gov/acc Analysis: {subject}
 Date: {today}
 
-## Governance at a Glance
+## At a Glance
 
 {Key numbers: participation rate, power concentration, proposal velocity,
 treasury size, active delegates. Just facts.}
 
-## Structural Analysis
+## Governance Surfaces
 
-### {Lens name}
+**Where governance adds value:** {evidence-based}
+**Where governance is overhead:** {evidence-based}
+**Where governance is missing:** {evidence-based}
 
-**What the data shows:** {Specific evidence from artifacts}
+## Domain Analysis
 
-**What this means:** {Interpretation — what structural conditions exist
-and what they make likely}
+### Participation & Voice
+{What the data shows, what it means, what peers do differently}
 
-**What peers do differently:** {Comparative context if available}
+### Transparency & Accountability
+{...}
 
-... (repeat for each applicable lens)
+### Resilience & Security
+{...}
+
+### Value Creation & Funding
+{...}
+
+### Deliberation & Culture
+{...}
 
 ## What's Working
 
-{Genuine strengths — not generic praise, but specific structural
-features that produce good outcomes. Reference evidence.}
+{Specific structural features producing good outcomes. Reference evidence.}
 
 ## Structural Risks
 
-{Not "you have problem X" but "these structural conditions make Y likely."
-Each risk should be evidence-based and include what would need to change
-structurally — not just "add quadratic voting" but why and what it
-would change about the specific dynamics observed.}
+{Evidence-based risks with structural conditions that produce them.}
 
-## Recommendations
+## Experiments to Consider
 
-{Specific, actionable, grounded in the analysis.
-For each recommendation: what to do, why it addresses the
-structural condition identified, and what to watch for.}
+{Not generic recommendations but specific, testable experiments
+this system could run. Frame as hypotheses:
+"If [change], we expect [outcome], measurable by [metric]."}
 ```
 
 ### Step 6: Offer next steps
 
-- "Want me to analyze a specific aspect in more depth?"
-- "Want me to draft governance proposals to address the structural risks?"
+- "Want me to analyze a specific domain in more depth?"
+- "Want me to draft governance proposals for any of the experiments?"
 - "Want to compare this against another governance system?"
-- "Want me to evaluate how specific changes would affect the dynamics I identified?"
+- "Want me to design a Harmonica deliberation session to explore these findings with the community?"
 
 ## Focus flags
 
-`power`, `legitimacy`, `participation`, `information`, `contributors`, `resources`, `coherence`, `adaptation`, `knowledge`, `technical`, `all`
+`participation`, `accountability`, `resilience`, `funding`, `deliberation`, `surfaces`, `all`
 
 ## Optional MCP integrations
 

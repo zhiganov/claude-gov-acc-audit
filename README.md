@@ -1,14 +1,14 @@
 # claude-gov-acc-audit
 
-A [Claude Code](https://claude.ai/code) skill that analyzes governance systems using research-backed diagnostic lenses from the [gov/acc](https://gov-acc.metagov.org/) community.
+A [Claude Code](https://claude.ai/code) skill that analyzes governance systems using the [gov/acc](https://gov-acc.metagov.org/) research framework.
 
-Not a checklist — it reads actual governance data (proposals, votes, forums, constitutions) and identifies structural patterns.
+Not a checklist — reads actual governance data (proposals, votes, forums, constitutions) and produces context-specific analysis grounded in what practitioners and researchers have learned.
 
 ## Why
 
-Governance leads don't need a tool that tells them "voting fatigue exists." They need analysis of *their* specific governance data: participation trends, power concentration patterns, divergences between stated process and actual behavior, structural conditions that make failure modes likely.
+Gov/acc is a time-bound research initiative (through Devcon 2026) focused on demonstrating that decentralized governance can meaningfully improve ecosystem outcomes. The core question isn't "is governance good?" but "where does decentralized coordination add clear value, and is it working?"
 
-The gov/acc initiative (Metagov, 2026) identified recurring governance failure modes through practitioner interviews, workshops, and deliberation platforms. This skill uses those findings as **diagnostic lenses** to analyze real governance artifacts.
+This skill applies that lens to a specific governance system.
 
 ## Install
 
@@ -20,7 +20,7 @@ npx skillsadd zhiganov/claude-gov-acc-audit
 
 ```
 /gov-acc-audit <subject>
-/gov-acc-audit <subject> --focus <lens>
+/gov-acc-audit <subject> --focus <domain>
 ```
 
 ### Examples
@@ -34,40 +34,31 @@ npx skillsadd zhiganov/claude-gov-acc-audit
 
 ### Focus flags
 
-`power`, `legitimacy`, `participation`, `information`, `contributors`, `resources`, `coherence`, `adaptation`, `knowledge`, `technical`, `all`
+`participation`, `accountability`, `resilience`, `funding`, `deliberation`, `surfaces`, `all`
 
 ## What it does
 
 ### 1. Gathers real data
 
-Fetches governance artifacts: proposals and outcomes (Tally, Agora, Snapshot), voting records, token distribution, forum discussions, constitutions, delegate statements, treasury flows.
+Proposals and outcomes (Tally, Agora, Snapshot), voting records, token distribution, forum discussions, constitutions, delegate statements, treasury flows.
 
-### 2. Establishes baselines
+### 2. Analyzes through 5 gov/acc research domains
 
-Quantitative analysis first: participation trends over time, power concentration (top 10/20/50 wallets), proposal velocity and pass rates, delegate health and retention, treasury deployment vs stated priorities.
+| Domain | What it looks for |
+|--------|------------------|
+| **Participation & Voice** | Is governance applied to the right surfaces? What coordination problems does it actually solve? |
+| **Transparency & Accountability** | Where do stated process and actual decisions diverge? Are outcomes implemented? |
+| **Resilience & Security** | How does the community resist capture? What happens when key people leave? |
+| **Value Creation & Funding** | Does governance drive measurable value or is it overhead? Does capital flow toward priorities? |
+| **Deliberation & Culture** | Is there genuine deliberation or just voting? Can newcomers participate meaningfully? |
 
-### 3. Applies diagnostic lenses
+### 3. Identifies appropriate governance surfaces
 
-10 structural lenses from the gov/acc research:
+The key gov/acc question: where does decentralized governance add value, where is it overhead, and where is it missing?
 
-| Lens | What it looks for |
-|------|------------------|
-| Power distribution | Who actually controls outcomes? Trace contested proposals. |
-| Decision legitimacy | Where do stated process and actual decisions diverge? |
-| Participation sustainability | What's the participation trajectory and what's driving it? |
-| Information asymmetry | Who has context that shapes decisions? |
-| Contributor alignment | Does the incentive structure produce needed behaviors? |
-| Resource allocation | Does capital flow toward stated priorities? |
-| Institutional coherence | Does the system act as if it has a coherent purpose? |
-| Adaptive capacity | How has governance actually evolved and what drove changes? |
-| Knowledge continuity | What happens when key people leave? |
-| Technical-social alignment | Where do mechanisms and social reality diverge? |
+### 4. Recommends experiments
 
-Each lens produces evidence-based findings, not abstract risk flags.
-
-### 4. Reports with recommendations
-
-Structural risks grounded in evidence, comparative context from peer systems, and specific actionable recommendations tied to the dynamics observed.
+Not generic advice — specific, testable experiments framed as hypotheses: "If [change], we expect [outcome], measurable by [metric]."
 
 ## Optional MCP integrations
 
@@ -78,7 +69,7 @@ Structural risks grounded in evidence, comparative context from peer systems, an
 ## Research
 
 - [gov/acc](https://gov-acc.metagov.org/) — governance acceleration initiative by Metagov
-- [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) — community-ranked governance priorities with scores from practitioner deliberation
+- [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) — community-ranked governance priorities
 - [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — interactive visualizations of problems, solutions, and actors
 
 ## License
