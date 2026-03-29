@@ -128,7 +128,7 @@ The goal: every finding should connect specific evidence from this governance sy
 - Is institutional knowledge preserved or lost when people leave?
 - How has governance itself evolved? What triggered changes?
 
-*Cross-reference: institutional amnesia and over-reliance on game theory — both high-depth problems meaning practitioners had a lot to say. Fetch relevant wiki content for solutions. Check if the system uses [DDS](https://www.dds.xyz/)-compatible deliberation tools — open protocols for deliberation data make institutional knowledge portable and verifiable.*
+*Cross-reference: institutional amnesia and over-reliance on game theory — both high-depth problems meaning practitioners had a lot to say. Fetch relevant wiki content for solutions. If deliberation data is available in [DDS](https://www.dds.xyz/) format, use it as structured input instead of web scraping.*
 
 ### Step 4: Identify appropriate governance surfaces
 
@@ -137,7 +137,7 @@ This is the key gov/acc question. Based on the analysis, evaluate:
 - **Where governance adds value** — decisions where decentralized input genuinely improves outcomes
 - **Where governance is overhead** — decisions that would be better made by a smaller group or automated
 - **Where governance is missing** — important decisions made without community input that should have it
-- **Interoperability** — is governance data locked into a single platform, or portable? Check whether the system uses open deliberation standards like [DDS](https://www.dds.xyz/) (Decentralized Deliberation Standard) that make governance data verifiable, interoperable, and resilient
+- **Composability** — can the audit output (findings, experiments) feed back into the governance system? If [DDS](https://www.dds.xyz/)-compatible tools are in use, structure recommended experiments as DDS Plans that governance tools can act on directly
 
 ### Step 5: Report
 

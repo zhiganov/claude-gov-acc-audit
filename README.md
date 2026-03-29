@@ -86,9 +86,13 @@ The skill will be powered by a dedicated **gov/acc MCP server** — structured a
 
 Until then, the skill works by web fetching governance platform data and the priority leaderboard.
 
-## Standards
+## Interoperability
 
-- **[DDS](https://www.dds.xyz/)** (Decentralized Deliberation Standard) — open protocol for sovereign, verifiable, interoperable deliberation. The audit checks whether the governance system uses open standards for deliberation data, and recommends DDS-compatible tools when gaps are found.
+Built to be composable with the [Decentralized Deliberation Standard](https://www.dds.xyz/) (DDS) — an open protocol that separates deliberation into Plan, Collect, and Analyze interfaces.
+
+- **As a DDS Analyzer** — if a DAO's deliberation data is in DDS format, the audit gets structured input instead of web scraping
+- **Output as DDS Plan** — audit findings and recommended experiments can be fed back into the governance system as structured deliberation plans: "here's what we found, here's a session to run about it"
+- **Composable with other tools** — any DDS-compatible collection tool (Harmonica, Agora, Snapshot) can feed data into the audit, and any DDS-compatible planning tool can act on the output
 
 ## Other MCP integrations
 
