@@ -55,21 +55,18 @@ Before interpreting, establish the numbers:
 
 Present facts before drawing conclusions.
 
-### Step 2b: Load gov/acc research context
-
-Fetch the gov/acc knowledge base to ground the analysis in practitioner research:
-
-1. **[gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard)** — community-ranked priorities with scores. Use to weight which domains deserve deeper investigation.
-2. **[gov/acc wiki](https://gov-acc.netlify.app)** — structured problems, solutions, and actor profiles. Fetch pages relevant to the patterns observed in Step 2 (e.g., if participation is low, fetch the wiki's "Voting Fatigue & Apathy" page for practitioner-identified causes and solutions).
-3. **[gov/acc Research Dashboard](https://gov-acc-research.netlify.app)** — interactive data on problem breadth/depth, solution maturity, and actor networks.
-
-**If the gov/acc MCP server is available** (planned, HAR-562): use structured queries instead of web fetching — `get_problem()`, `search_content()`, `get_solutions_for_problem()`.
-
-This means the analysis can cite specific practitioner experiences: "28 practitioners identified token voting failure as the most prevalent governance problem — your system shows the same pattern with 85% of voting power in 15 wallets."
-
 ### Step 3: Analyze through the five gov/acc research domains
 
 These domains come directly from the gov/acc initiative's research agenda. For each, analyze what the data reveals about this specific system. Look for evidence, not abstractions.
+
+**Throughout the analysis**, cross-reference findings against the gov/acc knowledge base:
+- Fetch relevant pages from the [gov/acc wiki](https://gov-acc.netlify.app) when a pattern matches a known problem or solution
+- Check the [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) to weight findings by what the community considers most urgent
+- Reference the [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) for comparative data
+
+**If the gov/acc MCP server is available** (planned, HAR-562): use structured queries — `get_problem()`, `search_content()`, `get_solutions_for_problem()`.
+
+The goal: every finding should connect specific evidence from this governance system to what practitioners across the ecosystem have learned.
 
 #### Domain 1: Participation & Voice
 
@@ -82,6 +79,8 @@ These domains come directly from the gov/acc initiative's research agenda. For e
 - Do tools and processes increase participation while improving (not just legitimizing) outcomes?
 - Is the community scoped to people who actually sustain the system, or is it open to drive-by voting?
 
+*Cross-reference: participation is consistently the #1 community priority on the leaderboard. If this system has participation problems, cite what practitioners identified as root causes and solutions.*
+
 #### Domain 2: Transparency & Accountability
 
 *What does functional accountability actually look like in this system, operationally?*
@@ -93,6 +92,8 @@ These domains come directly from the gov/acc initiative's research agenda. For e
 - Is there accountability for funded work, or just allocation?
 - Where is information asymmetry — who has context that shapes decisions?
 
+*Cross-reference: governance theater and recentralization were identified as a top-3 problem by practitioners. If this system shows signs of it, cite specific patterns they described.*
+
 #### Domain 3: Resilience & Security
 
 *How does this community resist capture? What operational structures enable or undermine it?*
@@ -102,6 +103,8 @@ These domains come directly from the gov/acc initiative's research agenda. For e
 - Are there mechanisms for the community to override decisions by insiders?
 - What are the attack surfaces — flash loan voting, bribery, social engineering?
 - How does the system handle crises? Any past examples?
+
+*Cross-reference: informal power and narrative capture, token voting failure — check what structural conditions practitioners identified and whether they're present here.*
 
 #### Domain 4: Value Creation & Funding
 
@@ -113,6 +116,8 @@ These domains come directly from the gov/acc initiative's research agenda. For e
 - Are contributors — the people doing critical work — aligned with governance incentives?
 - How does the system learn from past funding decisions?
 
+*Cross-reference: broken contributor economies and grant system dysfunction — check wiki for practitioner-identified patterns and solutions like contributor streams, specialized committees.*
+
 #### Domain 5: Deliberation & Culture
 
 *Which deliberative forms produce the best outcomes here? What's the governance culture?*
@@ -122,6 +127,8 @@ These domains come directly from the gov/acc initiative's research agenda. For e
 - Do newcomers have a path to meaningful governance participation?
 - Is institutional knowledge preserved or lost when people leave?
 - How has governance itself evolved? What triggered changes?
+
+*Cross-reference: institutional amnesia and over-reliance on game theory — both high-depth problems meaning practitioners had a lot to say. Fetch relevant wiki content for solutions.*
 
 ### Step 4: Identify appropriate governance surfaces
 
