@@ -6,9 +6,11 @@ Not a checklist — reads actual governance data (proposals, votes, forums, cons
 
 ## Why
 
-Gov/acc is a time-bound research initiative (through Devcon 2026) focused on demonstrating that decentralized governance can meaningfully improve ecosystem outcomes. The core question isn't "is governance good?" but "where does decentralized coordination add clear value, and is it working?"
+Vitalik's [d/acc](https://vitalik.eth.limo/general/2025/01/05/dacc2.html) vision — decentralized, democratic, differential, defensive acceleration — requires governance that actually works. Not governance theater, not token-weighted plutocracy, but systems where distributed decision-making produces better outcomes than centralized control.
 
-This skill applies that lens to a specific governance system.
+[Gov/acc](https://gov-acc.metagov.org/) is the governance arm of that vision: a time-bound research initiative (through Devcon 2026) focused on demonstrating that decentralized governance can meaningfully improve ecosystem outcomes. The core question isn't "is governance good?" but "where does decentralized coordination add clear value, and is it working?"
+
+This skill applies that lens to a specific governance system — reading real data, not running a checklist.
 
 ## Install
 
