@@ -1,14 +1,14 @@
 # claude-gov-acc-audit
 
-A Claude Code skill that evaluates governance systems against research-backed principles from the [gov/acc](https://gov-acc.metagov.org/) community.
+A [Claude Code](https://claude.ai/code) skill that analyzes governance systems using research-backed diagnostic lenses from the [gov/acc](https://gov-acc.metagov.org/) community.
 
-Works on DAOs, protocols, communities, organizations — anything with a governance system.
+Not a checklist — it reads actual governance data (proposals, votes, forums, constitutions) and identifies structural patterns.
 
 ## Why
 
-The gov/acc initiative (Metagov, 2026) brings together governance practitioners from across web3, civic tech, and institutional design — through structured interviews, workshops, deliberation platforms, and collaborative research. The community has identified core problems that cause governance systems to fail, and the solutions practitioners are building to address them.
+Governance leads don't need a tool that tells them "voting fatigue exists." They need analysis of *their* specific governance data: participation trends, power concentration patterns, divergences between stated process and actual behavior, structural conditions that make failure modes likely.
 
-This skill turns that ongoing research into a practical audit tool. Point it at a DAO constitution, a community's decision-making process, or a protocol's governance framework and get a research-grounded assessment of where it's healthy and where it's at risk.
+The gov/acc initiative (Metagov, 2026) identified recurring governance failure modes through practitioner interviews, workshops, and deliberation platforms. This skill uses those findings as **diagnostic lenses** to analyze real governance artifacts.
 
 ## Install
 
@@ -20,47 +20,54 @@ npx skillsadd zhiganov/claude-gov-acc-audit
 
 ```
 /gov-acc-audit <subject>
-/gov-acc-audit <subject> --focus <category>
+/gov-acc-audit <subject> --focus <lens>
 ```
 
 ### Examples
 
 ```
-/gov-acc-audit "Arbitrum DAO constitution"
-/gov-acc-audit "our community decision-making process"
-/gov-acc-audit "Optimism governance" --focus delegation
-/gov-acc-audit "MakerDAO" --focus voting
+/gov-acc-audit "ENS DAO"
+/gov-acc-audit "Arbitrum governance"
+/gov-acc-audit "our community's decision-making process"
+/gov-acc-audit "Optimism" --focus participation
 ```
 
 ### Focus flags
 
-`voting`, `participation`, `power`, `contributors`, `funding`, `purpose`, `delegation`, `knowledge`, `legal`, `all`
+`power`, `legitimacy`, `participation`, `information`, `contributors`, `resources`, `coherence`, `adaptation`, `knowledge`, `technical`, `all`
 
-## What it checks
+## What it does
 
-### 11 Governance Problems
+### 1. Gathers real data
 
-| # | Problem |
-|---|---------|
-| 1 | Token Voting Failure & Plutocracy |
-| 2 | Voting Fatigue & Apathy |
-| 3 | Governance Theater & Recentralization |
-| 4 | Informal Power & Narrative Capture |
-| 5 | Broken Contributor Economies |
-| 6 | Lack of Clear Purpose |
-| 7 | Delegate Sustainability |
-| 8 | Grant System Dysfunction & Capital Misallocation |
-| 9 | Technical & Legal Gaps |
-| 10 | Over-Reliance on Game Theory |
-| 11 | Institutional Amnesia |
+Fetches governance artifacts: proposals and outcomes (Tally, Agora, Snapshot), voting records, token distribution, forum discussions, constitutions, delegate statements, treasury flows.
 
-### Solutions Assessment
+### 2. Establishes baselines
 
-The audit also checks whether the system employs practitioner-recommended solutions: conviction voting, delegation mechanisms, governance memory systems, contributor streams, specialized committees, AI governance assistants, and more.
+Quantitative analysis first: participation trends over time, power concentration (top 10/20/50 wallets), proposal velocity and pass rates, delegate health and retention, treasury deployment vs stated priorities.
 
-## Output
+### 3. Applies diagnostic lenses
 
-For each problem: **Protected**, **Partially addressed**, or **Vulnerable** — with evidence from the governance artifacts. Plus critical gaps with specific recommended solutions from the research.
+10 structural lenses from the gov/acc research:
+
+| Lens | What it looks for |
+|------|------------------|
+| Power distribution | Who actually controls outcomes? Trace contested proposals. |
+| Decision legitimacy | Where do stated process and actual decisions diverge? |
+| Participation sustainability | What's the participation trajectory and what's driving it? |
+| Information asymmetry | Who has context that shapes decisions? |
+| Contributor alignment | Does the incentive structure produce needed behaviors? |
+| Resource allocation | Does capital flow toward stated priorities? |
+| Institutional coherence | Does the system act as if it has a coherent purpose? |
+| Adaptive capacity | How has governance actually evolved and what drove changes? |
+| Knowledge continuity | What happens when key people leave? |
+| Technical-social alignment | Where do mechanisms and social reality diverge? |
+
+Each lens produces evidence-based findings, not abstract risk flags.
+
+### 4. Reports with recommendations
+
+Structural risks grounded in evidence, comparative context from peer systems, and specific actionable recommendations tied to the dynamics observed.
 
 ## Optional MCP integrations
 
@@ -70,8 +77,9 @@ For each problem: **Protected**, **Partially addressed**, or **Vulnerable** — 
 
 ## Research
 
-- [gov/acc: Accelerating Governance Innovation in Web3](https://medium.com/@eugene.leventhal/gov-acc-accelerating-governance-innovation-in-web3-31309f06ab63) — Eugene Leventhal, Metagov
+- [gov/acc: Accelerating Governance Innovation in Web3](https://gov-acc.metagov.org/) — Eugene Leventhal, Metagov
 - [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — interactive visualizations of problems, solutions, and actors
+- [Harmonica](https://harmonica.chat) — structured interviews powering the research
 
 ## License
 

@@ -1,210 +1,187 @@
 ---
 name: gov/acc Audit
-description: Evaluate governance systems against research-backed principles from the gov/acc community. Works on DAOs, communities, organizations, protocols.
+description: Analyze governance systems using research-backed diagnostic lenses from the gov/acc community. Reads actual governance data — proposals, votes, forums, constitutions — and identifies structural patterns.
 ---
 
 # gov/acc Audit
 
-Evaluate a governance system against principles surfaced by the gov/acc (governance acceleration) research community — 50+ governance practitioners across web3, civic tech, and institutional design.
+Analyze a governance system using diagnostic lenses from the gov/acc (governance acceleration) research community. This is not a checklist — it reads actual governance artifacts and identifies structural patterns, divergences between stated values and actual behavior, and conditions that make specific failure modes likely.
 
-**Trigger:** `/gov-acc-audit <subject>` optionally with `--focus <category>`
+**Trigger:** `/gov-acc-audit <subject>` optionally with `--focus <lens>`
 
-The subject can be: a DAO constitution, a community's decision-making process, a protocol's governance framework, an organization's bylaws, a forum, or an onchain voting system.
+The subject can be: a DAO (by name or URL), a protocol's governance framework, a community's decision-making process, an organization's bylaws.
 
 ## Background
 
-The gov/acc initiative (Metagov, 2026) brings together governance practitioners through structured interviews, workshops, and deliberation platforms. The community has identified 11 core governance problems and the solutions practitioners are building to address them.
+The gov/acc initiative (Metagov, 2026) brings together governance practitioners through structured interviews, workshops, and deliberation platforms. The community has identified recurring governance failure modes and the structural conditions that produce them.
 
-This isn't theoretical — every item was surfaced by real governance practitioners describing real failures they experienced.
+This skill uses those findings as **diagnostic lenses** — not things to check off, but patterns to look for in real governance data.
 
 ## Process
 
-### Step 1: Understand the system
+### Step 1: Gather governance artifacts
 
-Gather the governance artifacts:
-- **Constitutions / bylaws / charters** — the formal rules
-- **Forum posts / proposals** — how decisions are actually discussed
-- **Voting records** — who votes, participation rates, outcomes
-- **Treasury/funding flows** — how resources are allocated
-- **Contributor structures** — who does the work, how they're compensated
-- **Communication channels** — where governance happens informally
+Collect as much real data as possible about the system. The more data, the better the analysis.
 
-Read what's available. The audit works with whatever artifacts exist — a DAO with extensive documentation and a small community with just a Discord are both valid subjects.
+**Onchain / platform data:**
+- Proposals and their outcomes (Tally, Agora, Snapshot, Governor contracts)
+- Voting records — participation rates, vote distribution, delegate behavior
+- Treasury flows — where money goes, who decides
+- Token distribution — concentration, delegation patterns
 
-### Step 2: Evaluate against the 11 governance problems
+**Offchain artifacts:**
+- Constitution, charter, bylaws, operating manual
+- Forum discussions (Discourse, Commonwealth) — especially contentious proposals
+- Delegate statements and platforms
+- Meeting notes, call recordings, governance reports
+- Communication channels (Discord governance channels, Telegram groups)
 
-For each problem, assess whether the governance system is vulnerable to it. Score:
-- `[x]` **Protected** — system has mechanisms that prevent or mitigate this
-- `[~]` **Partially addressed** — some protections exist but gaps remain
-- `[ ]` **Vulnerable** — no meaningful protection; this failure mode is likely
-- `[n/a]` — not applicable to this type of governance
+**Use web search and available MCP tools** to fetch current data. For major DAOs, governance platforms (Tally, Agora, Boardroom) have public APIs and dashboards.
 
-#### 1. Token Voting Failure & Plutocracy
-*The most widespread problem. Wealth-weighted voting concentrates power.*
+### Step 2: Quantitative analysis
 
-- [ ] Voting power is not purely proportional to token holdings
-- [ ] Mechanisms exist to amplify smaller holders (quadratic voting, conviction voting, delegation)
-- [ ] Large holders cannot unilaterally pass proposals
-- [ ] Voting power distribution is transparent and monitored
+Before interpreting, establish the baseline numbers:
 
-#### 2. Governance Theater & Recentralization
-*Formal governance exists but real decisions happen elsewhere (20/50).*
+- **Participation trends** — voter turnout over time, by proposal type. Is it rising, falling, stable?
+- **Power concentration** — what % of voting power is held by top 10/20/50 addresses? How has this changed?
+- **Proposal velocity** — how many proposals per month? What % pass? What % are contested?
+- **Delegate health** — how many active delegates? Retention rate? Voting consistency?
+- **Treasury deployment** — burn rate, allocation categories, accountability mechanisms
+- **Time-to-decision** — how long from proposal to execution?
 
-- [ ] Governance decisions have binding authority — they actually get implemented
-- [ ] Core team / foundation cannot override governance outcomes
-- [ ] Important decisions go through governance, not just uncontroversial ones
-- [ ] There is no "shadow governance" where insiders pre-negotiate outcomes
+Present these as facts before drawing conclusions.
 
-#### 3. Voting Fatigue & Apathy
-*Too many proposals, not enough participation (24/50).*
+### Step 3: Structural diagnosis
 
-- [ ] Proposal volume is manageable — not everything requires a vote
-- [ ] Delegation or representative mechanisms reduce individual burden
-- [ ] Participation incentives exist beyond pure altruism
-- [ ] Voter participation rates are tracked and healthy (>10% for major decisions)
+Using the gov/acc diagnostic lenses, analyze what the data reveals about the system's structural health. For each lens that applies, look for **specific evidence** in the artifacts — not abstract risks, but concrete patterns.
 
-#### 4. Informal Power & Narrative Capture
-*Influence flows through social capital, not formal authority (17/50).*
+#### Lens 1: Power distribution
+*Not "is there plutocracy?" but "what does voting power concentration actually mean for this system's decisions?"*
 
-- [ ] Decision-making criteria are explicit, not vibes-based
-- [ ] Multiple communication channels prevent single-narrative dominance
-- [ ] Newcomers can influence decisions, not just established members
-- [ ] Power dynamics are discussed openly, not taboo
+- Who controls outcomes? Trace the last 20 contested proposals — did the same wallets/delegates decide them?
+- What decisions can small holders actually influence?
+- Is there a path from participation to power, or is power static?
 
-#### 5. Broken Contributor Economies
-*People who do the work aren't fairly compensated or recognized (14/50).*
+#### Lens 2: Decision legitimacy
+*Not "is there governance theater?" but "where do stated process and actual decision-making diverge?"*
 
-- [ ] Clear paths from contribution to compensation
-- [ ] Compensation is transparent and roughly equitable
-- [ ] Non-financial contributions (community building, documentation) are valued
-- [ ] Contributors have voice in governance proportional to their involvement
+- Which important decisions went through governance vs were made informally?
+- Are there patterns of proposals being pre-negotiated before the vote?
+- Do governance outcomes actually get implemented? Track execution rate.
 
-#### 6. Grant System Dysfunction & Capital Misallocation
-*Funding goes to the wrong things or the process is broken (10/50).*
+#### Lens 3: Participation sustainability
+*Not "is there voting fatigue?" but "what is the actual participation trajectory and what's driving it?"*
 
-- [ ] Grant criteria are clear and aligned with stated goals
-- [ ] Follow-up and accountability exist for funded projects
-- [ ] Funding decisions aren't dominated by personal networks
-- [ ] Treasury management is transparent with regular reporting
+- Participation trend by proposal type — maybe core protocol votes get turnout but grants don't
+- What's the delegate churn rate? Why are delegates leaving?
+- Is the system asking too much of participants, or too little?
 
-#### 7. Lack of Clear Purpose
-*The organization doesn't know what it's for (14/50).*
+#### Lens 4: Information asymmetry
+*Not "is there narrative capture?" but "who has access to what information and how does that shape decisions?"*
 
-- [ ] Mission / purpose is stated and actually referenced in decisions
-- [ ] Strategic priorities exist and guide resource allocation
-- [ ] There's a process for revisiting and updating purpose
-- [ ] Members can articulate why the organization exists
+- Are proposal impacts well-communicated before votes?
+- Do insiders have context that regular participants lack?
+- How accessible is governance information to newcomers?
 
-#### 8. Over-Reliance on Game Theory
-*Governance designed around rational actors instead of real humans (8/50, highest depth).*
+#### Lens 5: Contributor alignment
+*Not "are contributors compensated?" but "does the incentive structure produce the behaviors the system needs?"*
 
-- [ ] Governance accounts for human behavior (emotion, relationships, trust)
-- [ ] Mechanisms don't assume purely self-interested actors
-- [ ] Qualitative input (deliberation, discussion) complements quantitative voting
-- [ ] Edge cases and gaming are monitored, not just modeled
+- What gets rewarded? What gets ignored?
+- Are the people doing critical work also the people with governance influence?
+- Is there a contributor pipeline or just an insider circle?
 
-#### 9. Delegate Sustainability
-*Delegates burn out or become captured (11/50).*
+#### Lens 6: Resource allocation
+*Not "are grants dysfunctional?" but "does capital flow toward the system's stated priorities?"*
 
-- [ ] Delegate roles are compensated or have clear term limits
-- [ ] Delegate performance is tracked and transparent
-- [ ] Delegation can be easily revoked or reassigned
-- [ ] Multiple delegates prevent single-point-of-failure
+- Map treasury outflows against stated strategic priorities — do they align?
+- What's the accountability chain for funded work?
+- How does the system learn from past allocation decisions?
 
-#### 10. Institutional Amnesia
-*Past decisions, context, and rationale are lost (8/50, high depth).*
+#### Lens 7: Institutional coherence
+*Not "is there a clear purpose?" but "does the system act as if it has a coherent purpose?"*
 
-- [ ] Decision rationale is recorded, not just outcomes
-- [ ] New members can understand past decisions and their context
-- [ ] Knowledge management system exists (wiki, handbook, archives)
-- [ ] Handoff processes preserve institutional knowledge during transitions
+- Do proposals and decisions point in a consistent direction?
+- Can members articulate what the system is for — and do they agree?
+- When priorities conflict, how are tradeoffs made?
 
-#### 11. Technical & Legal Gaps
-*Smart contract limitations and legal ambiguity undermine governance (10/50).*
+#### Lens 8: Adaptive capacity
+*Not "can governance evolve?" but "how has it actually evolved and what drove those changes?"*
 
-- [ ] Governance has legal standing or clear legal wrapper
-- [ ] Smart contract limitations are acknowledged and mitigated
-- [ ] Upgrade mechanisms exist for technical governance infrastructure
-- [ ] Legal and technical risks are communicated to participants
+- What governance changes have been made in the last year? What triggered them?
+- How does the system respond to failures or crises?
+- Is there a feedback loop from governance outcomes to governance design?
 
-### Step 3: Assess governance solutions
+#### Lens 9: Knowledge continuity
+*Not "is there institutional amnesia?" but "what happens when key people leave or context is lost?"*
 
-Check whether the system employs any of the solutions identified by practitioners:
+- Can you reconstruct the rationale for a decision from 6 months ago?
+- What happens to a workstream when its lead departs?
+- Is governance knowledge in people's heads or in accessible artifacts?
 
-**Participation & Voting:**
-- [ ] Conviction voting, quadratic voting, or similar alternatives to token-weighted voting
-- [ ] Delegation mechanisms (liquid democracy, steward councils)
-- [ ] Optimistic governance (proposals pass unless vetoed)
-- [ ] Polis / opinion clustering / sensemaking tools
+#### Lens 10: Technical-social alignment
+*Not "are there legal gaps?" but "where do the technical mechanisms and social reality diverge?"*
 
-**Structure & Process:**
-- [ ] Specialized committees with delegated authority
-- [ ] Clear contributor streams and compensation frameworks
-- [ ] Staged proposal process (idea → draft → vote → implementation)
-- [ ] Cross-DAO collaboration mechanisms
+- Where do smart contract constraints not match governance intent?
+- Are there workarounds that indicate the technical system doesn't fit?
+- How are off-chain decisions enforced on-chain?
 
-**Knowledge & Memory:**
-- [ ] Governance memory system (searchable decisions, rationale)
-- [ ] Onboarding for new governance participants
-- [ ] Regular governance health reports / retrospectives
+### Step 4: Comparative context
 
-**Technology:**
-- [ ] AI governance assistants (summarization, analysis, recommendations)
-- [ ] Reputation / soulbound tokens for non-financial contributions
-- [ ] Onchain + offchain governance integration
+If data is available, compare against peer governance systems. What do similar DAOs/communities do differently? What's worked? This isn't about copying — it's about understanding the range of viable approaches.
 
-### Step 4: Report
+### Step 5: Report
 
 ```markdown
-# gov/acc Audit: {subject}
+# gov/acc Analysis: {subject}
 Date: {today}
 
-## Summary
-- Protected: {count}/11
-- Partially addressed: {count}/11
-- Vulnerable: {count}/11
+## Governance at a Glance
 
-## Overall Assessment
+{Key numbers: participation rate, power concentration, proposal velocity,
+treasury size, active delegates. Just facts.}
 
-{2-3 sentences. What's the governance health? Where is it strong?
-Where is it most at risk? How does it compare to what practitioners
-described as healthy governance?}
+## Structural Analysis
 
-## Problem-by-Problem Analysis
+### {Lens name}
 
-### 1. Token Voting Failure & Plutocracy
-**Status: [Protected / Partially / Vulnerable]**
+**What the data shows:** {Specific evidence from artifacts}
 
-{Evidence from the governance artifacts. What mechanisms exist?
-What's missing? How severe is the risk?}
+**What this means:** {Interpretation — what structural conditions exist
+and what they make likely}
 
-... (repeat for each applicable problem)
+**What peers do differently:** {Comparative context if available}
 
-## Solutions Deployed
-{Which research-backed solutions does this system already use?}
+... (repeat for each applicable lens)
 
-## Critical Gaps
-1. {Most urgent vulnerability} — **Recommended:** {specific solution from the research}
-2. {Second most urgent} — **Recommended:** {solution}
-3. {Third} — **Recommended:** {solution}
+## What's Working
 
-## Strengths
-{What this governance does well — worth preserving and building on.}
+{Genuine strengths — not generic praise, but specific structural
+features that produce good outcomes. Reference evidence.}
 
-## Connections to Broader Research
-{Link findings to Ostrom's commons principles, Plurality concepts,
-or Alexander's living structure properties where relevant.}
+## Structural Risks
+
+{Not "you have problem X" but "these structural conditions make Y likely."
+Each risk should be evidence-based and include what would need to change
+structurally — not just "add quadratic voting" but why and what it
+would change about the specific dynamics observed.}
+
+## Recommendations
+
+{Specific, actionable, grounded in the analysis.
+For each recommendation: what to do, why it addresses the
+structural condition identified, and what to watch for.}
 ```
 
-### Step 5: Offer next steps
+### Step 6: Offer next steps
 
-- "Want me to draft governance proposals to address the critical gaps?"
-- "Want to evaluate a specific aspect in more depth? (Use `--focus <category>`)"
+- "Want me to analyze a specific aspect in more depth?"
+- "Want me to draft governance proposals to address the structural risks?"
 - "Want to compare this against another governance system?"
+- "Want me to evaluate how specific changes would affect the dynamics I identified?"
 
 ## Focus flags
 
-`voting`, `participation`, `power`, `contributors`, `funding`, `purpose`, `delegation`, `knowledge`, `legal`, `all`
+`power`, `legitimacy`, `participation`, `information`, `contributors`, `resources`, `coherence`, `adaptation`, `knowledge`, `technical`, `all`
 
 ## Optional MCP integrations
 
