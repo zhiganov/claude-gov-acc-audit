@@ -64,7 +64,7 @@ Not generic advice — specific, testable experiments framed as hypotheses: "If 
 
 ## MCP server (planned)
 
-The skill will be powered by a dedicated **gov/acc MCP server** (HAR-562) — structured access to the full research corpus: practitioner interviews, workshop outputs, Agora deliberation results, priority leaderboard, solution mappings, case studies. Same pattern as [Lenny's newsletter MCP](https://github.com/LennysNewsletter/lennys-newsletterpodcastdata) and [jtbd-knowledge-mcp](https://github.com/zhiganov/jtbd-knowledge-mcp).
+The skill will be powered by a dedicated **gov/acc MCP server** — structured access to the full research corpus: practitioner interviews, workshop outputs, Agora deliberation results, priority leaderboard, solution mappings, case studies. Same pattern as [Lenny's newsletter MCP](https://github.com/LennysNewsletter/lennys-newsletterpodcastdata).
 
 Until then, the skill works by web fetching governance platform data and the priority leaderboard.
 
