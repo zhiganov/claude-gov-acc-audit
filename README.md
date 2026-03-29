@@ -60,7 +60,13 @@ The key gov/acc question: where does decentralized governance add value, where i
 
 Not generic advice — specific, testable experiments framed as hypotheses: "If [change], we expect [outcome], measurable by [metric]."
 
-## Optional MCP integrations
+## MCP server (planned)
+
+The skill will be powered by a dedicated **gov/acc MCP server** (HAR-562) — structured access to the full research corpus: practitioner interviews, workshop outputs, Agora deliberation results, priority leaderboard, solution mappings, case studies. Same pattern as [Lenny's newsletter MCP](https://github.com/LennysNewsletter/lennys-newsletterpodcastdata) and [jtbd-knowledge-mcp](https://github.com/zhiganov/jtbd-knowledge-mcp).
+
+Until then, the skill works by web fetching governance platform data and the priority leaderboard.
+
+## Other MCP integrations
 
 - **living-structure** — does the governance exhibit Alexander's properties?
 - **Plurality MCP** (planned) — Weyl & Tang's collaborative technology principles
