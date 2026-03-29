@@ -38,31 +38,31 @@ npx skillsadd zhiganov/claude-gov-acc-audit
 
 `participation`, `accountability`, `resilience`, `funding`, `deliberation`, `surfaces`, `all`
 
-## What it does
+## How it works
 
-### 1. Gathers real data
+### Data sources
 
-The skill uses web search and web fetch to pull publicly available governance data:
+The skill pulls publicly available governance data via web search and web fetch:
 
-- **Governance platforms** — proposal history, voting records, and delegate info from [Tally](https://www.tally.xyz), [Agora](https://www.agora.xyz), [Snapshot](https://snapshot.org), [Boardroom](https://boardroom.io)
-- **Forums** — discussion threads from Discourse, Commonwealth, or governance-specific forums (fetched via URL)
-- **Documents** — constitutions, charters, operating manuals published on the DAO's docs site or GitHub
-- **Onchain data** — token distribution and treasury flows via block explorers (Etherscan, etc.)
-- **The user can also provide** local files, screenshots, or paste content directly — forum posts, meeting notes, delegate statements, anything relevant
-
-**gov/acc research as diagnostic context:**
-
-The skill cross-references findings against the gov/acc knowledge base — problems, solutions, and actors mapped by 50+ governance practitioners:
-
-- [gov/acc wiki](https://gov-acc.netlify.app) — structured problems, solutions, and actor profiles with relationships
-- [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — interactive visualizations of governance patterns across ecosystems
-- [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) — community-ranked priorities with scores from practitioner deliberation
-
-This means the skill doesn't just describe what it sees — it can say "this pattern matches what 28 practitioners identified as token voting failure" or "practitioners working on similar problems recommend conviction voting and delegation mechanisms."
+- **Governance platforms** — proposals, votes, delegates from [Tally](https://www.tally.xyz), [Agora](https://www.agora.xyz), [Snapshot](https://snapshot.org), [Boardroom](https://boardroom.io)
+- **Forums** — Discourse, Commonwealth discussion threads
+- **Documents** — constitutions, charters, operating manuals
+- **Onchain data** — token distribution, treasury flows via block explorers
+- **User-provided** — local files, screenshots, pasted content
 
 The more data available, the better the analysis. For major DAOs (ENS, Arbitrum, Optimism, MakerDAO), most governance data is publicly accessible.
 
-### 2. Analyzes through 5 gov/acc research domains
+### The gov/acc research lens
+
+The analysis is grounded in the gov/acc knowledge base — problems, solutions, and patterns identified by 50+ governance practitioners through structured interviews, workshops, and deliberation:
+
+- [gov/acc wiki](https://gov-acc.netlify.app) — structured problems, solutions, and actor profiles
+- [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) — community-ranked priorities with scores
+- [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — visualizations of governance patterns across ecosystems
+
+This isn't a separate data-gathering step — it's the framework the entire analysis runs through. Every finding connects evidence from the specific governance system to what practitioners across the ecosystem have learned.
+
+### 5 research domains
 
 | Domain | What it looks for |
 |--------|------------------|
@@ -72,13 +72,13 @@ The more data available, the better the analysis. For major DAOs (ENS, Arbitrum,
 | **Value Creation & Funding** | Does governance drive measurable value or is it overhead? Does capital flow toward priorities? |
 | **Deliberation & Culture** | Is there genuine deliberation or just voting? Can newcomers participate meaningfully? |
 
-### 3. Identifies appropriate governance surfaces
+### Governance surfaces
 
 The key gov/acc question: where does decentralized governance add value, where is it overhead, and where is it missing?
 
-### 4. Recommends experiments
+### Experiments, not recommendations
 
-Not generic advice — specific, testable experiments framed as hypotheses: "If [change], we expect [outcome], measurable by [metric]."
+Output is specific, testable experiments framed as hypotheses: "If [change], we expect [outcome], measurable by [metric]." Not generic advice.
 
 ## MCP server (planned)
 
