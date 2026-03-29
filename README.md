@@ -42,7 +42,15 @@ npx skillsadd zhiganov/claude-gov-acc-audit
 
 ### 1. Gathers real data
 
-Proposals and outcomes (Tally, Agora, Snapshot), voting records, token distribution, forum discussions, constitutions, delegate statements, treasury flows.
+The skill uses web search and web fetch to pull publicly available governance data:
+
+- **Governance platforms** — proposal history, voting records, and delegate info from [Tally](https://www.tally.xyz), [Agora](https://www.agora.xyz), [Snapshot](https://snapshot.org), [Boardroom](https://boardroom.io)
+- **Forums** — discussion threads from Discourse, Commonwealth, or governance-specific forums (fetched via URL)
+- **Documents** — constitutions, charters, operating manuals published on the DAO's docs site or GitHub
+- **Onchain data** — token distribution and treasury flows via block explorers (Etherscan, etc.)
+- **The user can also provide** local files, screenshots, or paste content directly — forum posts, meeting notes, delegate statements, anything relevant
+
+The more data available, the better the analysis. For major DAOs (ENS, Arbitrum, Optimism, MakerDAO), most governance data is publicly accessible.
 
 ### 2. Analyzes through 5 gov/acc research domains
 
