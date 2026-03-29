@@ -50,6 +50,16 @@ The skill uses web search and web fetch to pull publicly available governance da
 - **Onchain data** — token distribution and treasury flows via block explorers (Etherscan, etc.)
 - **The user can also provide** local files, screenshots, or paste content directly — forum posts, meeting notes, delegate statements, anything relevant
 
+**gov/acc research as diagnostic context:**
+
+The skill cross-references findings against the gov/acc knowledge base — problems, solutions, and actors mapped by 50+ governance practitioners:
+
+- [gov/acc wiki](https://gov-acc.netlify.app) — structured problems, solutions, and actor profiles with relationships
+- [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — interactive visualizations of governance patterns across ecosystems
+- [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) — community-ranked priorities with scores from practitioner deliberation
+
+This means the skill doesn't just describe what it sees — it can say "this pattern matches what 28 practitioners identified as token voting failure" or "practitioners working on similar problems recommend conviction voting and delegation mechanisms."
+
 The more data available, the better the analysis. For major DAOs (ENS, Arbitrum, Optimism, MakerDAO), most governance data is publicly accessible.
 
 ### 2. Analyzes through 5 gov/acc research domains

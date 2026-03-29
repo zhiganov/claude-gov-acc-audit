@@ -55,9 +55,17 @@ Before interpreting, establish the numbers:
 
 Present facts before drawing conclusions.
 
-### Step 2b: Weight by community priorities
+### Step 2b: Load gov/acc research context
 
-Fetch the [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) to understand what the broader governance community considers most urgent. Use the priority scores to weight the analysis — domains aligned with higher-ranked priorities deserve deeper investigation.
+Fetch the gov/acc knowledge base to ground the analysis in practitioner research:
+
+1. **[gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard)** — community-ranked priorities with scores. Use to weight which domains deserve deeper investigation.
+2. **[gov/acc wiki](https://gov-acc.netlify.app)** — structured problems, solutions, and actor profiles. Fetch pages relevant to the patterns observed in Step 2 (e.g., if participation is low, fetch the wiki's "Voting Fatigue & Apathy" page for practitioner-identified causes and solutions).
+3. **[gov/acc Research Dashboard](https://gov-acc-research.netlify.app)** — interactive data on problem breadth/depth, solution maturity, and actor networks.
+
+**If the gov/acc MCP server is available** (planned, HAR-562): use structured queries instead of web fetching — `get_problem()`, `search_content()`, `get_solutions_for_problem()`.
+
+This means the analysis can cite specific practitioner experiences: "28 practitioners identified token voting failure as the most prevalent governance problem — your system shows the same pattern with 85% of voting power in 15 wallets."
 
 ### Step 3: Analyze through the five gov/acc research domains
 
