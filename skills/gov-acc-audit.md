@@ -127,7 +127,7 @@ Using the gov/acc diagnostic lenses, analyze what the data reveals about the sys
 
 ### Step 3b: Weight by community priorities
 
-Fetch the [Deliberate Priority Leaderboard](https://govacc.net/deliberate/leaderboard) to understand what the broader governance community considers most urgent. Use the priority scores to weight the analysis — lenses aligned with higher-ranked priorities deserve deeper investigation.
+Fetch the [gov/acc Priority Leaderboard](https://govacc.net/deliberate/leaderboard) to understand what the broader governance community considers most urgent. Use the priority scores to weight the analysis — lenses aligned with higher-ranked priorities deserve deeper investigation.
 
 For example, if participation/onboarding is the #1 community priority (score 0.40) and the subject DAO has 2.8% voter turnout, that's not just a finding — it's the most critical gap relative to what the community has identified as important.
 
