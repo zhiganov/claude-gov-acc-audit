@@ -1,6 +1,6 @@
 # claude-gov-acc-audit
 
-A [Claude Code](https://claude.ai/code) skill that evaluates governance systems against research-backed principles from the [gov/acc](https://medium.com/@eugene.leventhal/gov-acc-accelerating-governance-innovation-in-web3-31309f06ab63) community.
+A Claude Code skill that evaluates governance systems against research-backed principles from the [gov/acc](https://gov-acc.metagov.org/) community.
 
 Works on DAOs, protocols, communities, organizations — anything with a governance system.
 
@@ -72,7 +72,6 @@ For each problem: **Protected**, **Partially addressed**, or **Vulnerable** — 
 
 - [gov/acc: Accelerating Governance Innovation in Web3](https://medium.com/@eugene.leventhal/gov-acc-accelerating-governance-innovation-in-web3-31309f06ab63) — Eugene Leventhal, Metagov
 - [gov/acc Research Dashboard](https://gov-acc-research.netlify.app) — interactive visualizations of problems, solutions, and actors
-- [Harmonica](https://harmonica.chat) — structured interviews powering the research
 
 ## License
 
